@@ -1,18 +1,27 @@
+#
+# mozaik generic demo dashboard
+#
+# It's not required, but you should add this env var,
+# without it, you'll probably reach the API rate limit.
+#
+# GITHUB_API_TOKEN=xxxxx
+#
 port: 5000
 
+# define duraton between each dashboard rotation (ms)
 rotationDuration: 10000
-
+# define the interval used by Mozaïk Bus to call registered APIs
 apisPollInterval: 100000
 
 dashboards:
 - columns: 4
   rows:    3
-  title:   quintilesims/layer0 test dashboard
+  title:   Mozaïk demo dashboard
   widgets:
   -
     extension:    github
     widget:       UserBadge
-    user:         tlake
+    user:         plouc
     columns:      1
     rows:         1
     x:            0
@@ -20,7 +29,7 @@ dashboards:
   -
     extension:    github
     widget:       OrgBadge
-    organization: quintilesims
+    organization: ekino
     columns:      1
     rows:         1
     x:            1
@@ -28,7 +37,7 @@ dashboards:
   -
     extension:    github
     widget:       RepoContributorsStats
-    repository:   quintilesims/layer0
+    repository:   plouc/mozaik
     columns:      1
     rows:         1
     x:            2
@@ -36,7 +45,7 @@ dashboards:
   -
     extension:    github
     widget:       RepoBadge
-    repository:   quintilesims/layer0
+    repository:   plouc/mozaik
     columns:      1
     rows:         1
     x:            3
@@ -58,7 +67,7 @@ dashboards:
   -
     extension:    github
     widget:       Branches
-    repository:   quintilesims/layer0
+    repository:   plouc/mozaik
     columns:      1
     rows:         1
     x:            2
@@ -66,7 +75,7 @@ dashboards:
   -
     extension:    github
     widget:       PullRequests
-    repository:   quintilesims/layer0
+    repository:   plouc/mozaik
     columns:      1
     rows:         1
     x:            3
@@ -74,8 +83,8 @@ dashboards:
   -
     extension:    travis
     widget:       Repository
-    owner:        quintilesims
-    repository:   layer0
+    owner:        plouc
+    repository:   mozaik
     columns:      1
     rows:         1
     x:            0
@@ -83,8 +92,8 @@ dashboards:
   -
     extension:   travis
     widget:      BuildHistogram
-    owner:       quintilesims
-    repository:  layer0
+    owner:       plouc
+    repository:  mozaik
     columns:     2
     rows:        1
     x:           1
@@ -92,8 +101,8 @@ dashboards:
   -
     extension:   travis
     widget:      BuildHistory
-    owner:       quintilesims
-    repository:  layer0
+    owner:       plouc
+    repository:  mozaik
     columns:     1
     rows:        1
     x:           3

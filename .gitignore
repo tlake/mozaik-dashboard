@@ -5,3 +5,5 @@ node_modules
 .env
 .idea
 *.log*
+*.swp
+local-env-vars
